@@ -2,10 +2,18 @@
 # Given a hash with numeric values, return the key for the smallest value
 
 def key_for_min_value(name_hash)
-  if test == {}
-       return nil
+  if name_hash == {}
+    return nil
   else
-       test = test.sort_by {|k, v| v}
-       test[0]
+    lowValue = name_hash.first[1]
+    lowKey = name_hash.first[0]
+    name_hash.each{|key, value|
+      if val < lowValue
+        lowValue = val
+        lowKey = key
+      end
+    end
+    return lowKey
+    
   end
 end
